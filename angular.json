@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "ng-dnd-wiki": {
+    "gm-wiki": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ng-dnd-wiki",
+            "outputPath": "dist/gm-wiki",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ng-dnd-wiki:build:production"
+              "browserTarget": "gm-wiki:build:production"
             },
             "development": {
-              "browserTarget": "ng-dnd-wiki:build:development"
+              "browserTarget": "gm-wiki:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ng-dnd-wiki:build"
+            "browserTarget": "gm-wiki:build"
           }
         },
         "test": {
