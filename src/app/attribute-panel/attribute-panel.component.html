@@ -1,0 +1,17 @@
+<section class="attr-container row">
+  <div class="attr-panel col-6">
+
+    <div class="row">
+      <div
+        *ngFor="let attrKey of this.attributeKeys()"
+        class="attr-box col-2 text-center"
+      >
+        <div class="attr-box-inner">
+          <p class="attr-name">{{ attrKey.toLocaleUpperCase() }}</p>
+          <span class="attr-value">{{ this.getAttrValue(attrKey) }}</span>
+          <span class='attr-modifier'> ( {{ this.getModifierText(this.getAttrValue(attrKey)) }})</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
