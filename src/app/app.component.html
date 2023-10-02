@@ -1,10 +1,5 @@
 
-
-<main>
-  <h1>{{ this.charName }}</h1>
-
-  <attribute-panel
-    [attributes]="this.attr"
-  />
-</main>
+<div *ngIf="this.view == 'search'">
+  <search-view />
+</div>
 

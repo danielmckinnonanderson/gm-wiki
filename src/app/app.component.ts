@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { AttributePanelComponent } from './attribute-panel/attribute-panel.component';
-import { Attributes } from 'src/types';
+import { SearchComponent } from './search/search.component';
+
+type AppViews = "search" | "character-sheet" | "session-notes";
 
 @Component({
   selector: 'app-root',
@@ -8,16 +9,5 @@ import { Attributes } from 'src/types';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'gm-wiki';
-
-  charName = "Some Name"
-
-  attr: Attributes = {
-    str: 20,
-    dex: 10,
-    con: 12,
-    int: 14,
-    wis: 17,
-    cha: 20
-  }
+  view: AppViews = "search";
 }

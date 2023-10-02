@@ -1,0 +1,64 @@
+[
+  {
+    "_metadata": {
+      "kind": "npc"
+    },
+    "name": "Assassin Vine",
+    "alignment": "unaligned",
+    "size_desc": "large plant",
+    "armor_class": 13,
+    "armor_desc": "natural armor",
+    "hit_points_const": 85,
+    "hit_points_dice": "10d10 + 30",
+    "speed": "5 ft., climb 5 ft.",
+    "attributes": {
+      "str": 18,
+      "dex": 10,
+      "con": 16,
+      "int": 1,
+      "wis": 10,
+      "cha": 1
+    },
+    "damage_resistances": [
+      "cold",
+      "fire"
+    ],
+    "condition_immunities": [
+      "blinded",
+      "deafened",
+      "exhaustion",
+      "prone"
+    ],
+    "senses": {
+      "vision_desc": "blindsight 30 ft.",
+      "passive_perception": 10
+    },
+    "languages": [],
+    "challenge": {
+      "value": 3,
+      "xp": 700
+    },
+    "features": [
+      {
+        "title": "False Appearance",
+        "description": "While the assasasin vine remains motionless, it is indistinguishable from a normal plant"
+      }
+    ],
+    "actions": [
+      {
+        "title": "Constrict",
+        "type": "Melee Weapon Attack",
+        "to_hit": "+6",
+        "reach": "20 ft.",
+        "targets": "one creature",
+        "on_hit": "The target takes 11 (2d6 + 4) bludgeoning damage, and it is grappled (escape DC 14). Until this grapple ends, the target is restrained and it takes 21 (6d6) poison damage at the start of each of its turns. The vine can constrict only one target at a time."
+      },
+      {
+        "title": "Entangling Vines",
+        "type": "Effect",
+        "reach": "15-foot square within 30 ft. of self",
+        "description": "The assasin vine can animate normal vines and roots on the ground in a 15-foot square within 30 feet of it. These plants turn the ground in that area into difficult terrain. A creature in that area when the effect begins must succeed on a DC 13 Strength saving throw or be restrained by entangling vines and roots. A creature restraained by the plants can use its action to make a DC 13 Strength (Athletics) check, freeing itself on a successful check. The effect ends after 1 minute or when the assassin vine dies or uses Entangling Vines again."
+      }
+    ]
+  }
+]

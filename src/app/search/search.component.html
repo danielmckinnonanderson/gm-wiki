@@ -1,0 +1,16 @@
+<div class="container text-center">
+  <h1>Search</h1>
+
+  <div>
+    <input
+      class=""
+      [(ngModel)]="this.searchQuery"
+      (ngModelChange)="this.onQueryChanged()"
+    />
+  </div>
+
+  <results-panel
+    [results]="this.results"
+  />
+</div>
+
