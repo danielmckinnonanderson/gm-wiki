@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AttributePanelComponent } from './attribute-panel/attribute-panel.component';
 import { SearchComponent } from './search/search.component';
 import { ResultsPanelComponent } from './results-panel/results-panel.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,9 +18,12 @@ import { ResultsPanelComponent } from './results-panel/results-panel.component';
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
