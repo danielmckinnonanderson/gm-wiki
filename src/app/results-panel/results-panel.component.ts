@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { NPC } from 'src/data/data.types';
 
 @Component({
@@ -9,6 +9,11 @@ import { NPC } from 'src/data/data.types';
 export class ResultsPanelComponent {
 
   @Input() results: NPC[] | null = null;
+  @Output() searchSelectionEvent = new EventEmitter<NPC>();
 
   constructor() {}
+
+  clickedSelection(selection: NPC): void {
+    this.searchSelectionEvent.emit(selection);
+  }
 }

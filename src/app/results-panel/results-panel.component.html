@@ -1,7 +1,12 @@
-<div *ngIf="this.results">
-  <ul>
-    <li *ngFor="let result of this.results">
-      {{ result.name }}
-    </li>
-  </ul>
+<div *ngIf="this.results" class="results-outer">
+  <div class="results-container">
+    <ul style="padding: 0px;">
+      <li *ngFor="let result of this.results" class="result-element">
+        <button (click)="this.clickedSelection(result)">
+            {{ result.name }}
+        </button>
+      </li>
+    </ul>
+  </div>
 </div>
+

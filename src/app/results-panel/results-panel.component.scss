@@ -1,0 +1,43 @@
+.results-outer {
+  margin: 16px;
+}
+
+.results-container {
+  margin: 0 auto;
+  border: solid black 1px;
+  max-width: 480px;
+}
+
+.result-element {
+  list-style: none;
+}
+
+button {
+  width: 100%;
+  appearance: none;
+  background: transparent;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+button:focus {
+  outline: none;
+  border-color: black;
+  background-color: transparent;
+  color: black;
+}
+
+button:hover {
+  border-color: black;
+  background-color: transparent;
+  color: black;
+}
+
+buttton:active {
+  background-color: black;
+  color: white;
+}
+

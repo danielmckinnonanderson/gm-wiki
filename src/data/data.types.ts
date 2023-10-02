@@ -1,5 +1,6 @@
 import { Attributes } from "src/types";
 
+export type UUID = string;
 export type Kind = "npc" | "item";
 
 export type ArmorClass =
@@ -25,9 +26,11 @@ export type ActionInfo = {
   description?: string,
 }
 
+
 export type NPC = {
   _metadata: { 
     kind: Kind
+    uuid: UUID 
   },
   name: string,
   alignment: Alignment,

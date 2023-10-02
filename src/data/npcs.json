@@ -1,7 +1,8 @@
 [
   {
     "_metadata": {
-      "kind": "npc"
+      "kind": "npc",
+      "uuid": "f25dc70a-1200-470d-bc7c-af5a2c52506e"
     },
     "name": "Assassin Vine",
     "alignment": "unaligned",
