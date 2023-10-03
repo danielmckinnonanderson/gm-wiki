@@ -4,16 +4,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AttributePanelComponent } from './attribute-panel/attribute-panel.component';
-import { SearchComponent } from './search/search.component';
+import { SearchViewComponent } from './search-view/search-view.component';
 import { ResultsPanelComponent } from './results-panel/results-panel.component';
 import { AppRoutingModule } from './app-routing.module';
+import { InfoViewComponent } from './info-view/info-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AttributePanelComponent,
-    SearchComponent,
-    ResultsPanelComponent
+    SearchViewComponent,
+    ResultsPanelComponent,
+    InfoViewComponent,
   ],
   imports: [
     BrowserModule,

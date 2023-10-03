@@ -6,10 +6,10 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'search-view',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss']
+  templateUrl: './search-view.component.html',
+  styleUrls: ['./search-view.component.scss']
 })
-export class SearchComponent implements OnInit {
+export class SearchViewComponent implements OnInit {
   searchQuery: string = "";
   results: any[] | NoResults = null as NoResults;
 
@@ -32,7 +32,7 @@ export class SearchComponent implements OnInit {
 
   onSearchSelection(selected: NPC): void {
     console.info("New search selection", selected);
-    this.router.navigateByUrl("/view/" + selected._metadata.uuid);
+    this.router.navigateByUrl("/info/" + selected._metadata.uuid);
   }
 
   // TODO - keyboard navigation in result panel

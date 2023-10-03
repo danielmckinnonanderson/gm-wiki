@@ -11,11 +11,16 @@ export type NoResults = null;
 })
 export class SearchService {
 
-  public results = new BehaviorSubject<any[] | null>(null);
+  public readonly results = new BehaviorSubject<any[] | NoResults>(null);
 
   constructor() { }
 
   onQueryChanged(query: string): void {
+    if (query === "") {
+      this.results.next(null as NoResults);
+      return;
+    }
+
     const found = this.search(query);
     this.results.next(found);
   }
