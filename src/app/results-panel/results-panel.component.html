@@ -2,8 +2,11 @@
   <div class="results-container">
     <ul style="padding: 0px;">
       <li *ngFor="let result of this.results" class="result-element">
-        <button (click)="this.clickedSelection(result)">
-            {{ result.name }}
+        <button
+          [id]="'result-button-' + result._metadata.uuid"
+          (click)="this.clickedSelection(result)"
+        >
+           {{ result.name }}
         </button>
       </li>
     </ul>

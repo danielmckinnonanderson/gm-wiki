@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { NPC } from 'src/data/data.types';
+import { NPC, UUID } from 'src/data/data.types';
 
 @Component({
   selector: 'results-panel',
@@ -9,6 +9,7 @@ import { NPC } from 'src/data/data.types';
 export class ResultsPanelComponent {
 
   @Input() results: NPC[] | null = null;
+
   @Output() searchSelectionEvent = new EventEmitter<NPC>();
 
   constructor() {}
@@ -16,4 +17,12 @@ export class ResultsPanelComponent {
   clickedSelection(selection: NPC): void {
     this.searchSelectionEvent.emit(selection);
   }
+
+  // TODO - keyboard nav within results
+  private onFocusedChanged(focused: UUID | null): void {
+    if (focused) {
+      document.getElementById('result-button-' + focused)!.focus();
+    }
+  }
 }
+

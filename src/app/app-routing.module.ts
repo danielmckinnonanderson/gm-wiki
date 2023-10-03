@@ -4,7 +4,7 @@ import { NgModule } from "@angular/core";
 
 const routes: Routes = [
   { path: 'search', component: SearchComponent },
-  // { path: 'view/:id', }
+  // { path: 'view/:id', },
 
   { path: '**', redirectTo: 'search' }
 ];

@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-  
   searchQuery: string = "";
   results: any[] | NoResults = null as NoResults;
 
@@ -22,6 +21,8 @@ export class SearchComponent implements OnInit {
       this.results = next;
       console.info(this.results);
     });
+
+    document.addEventListener('keyup', this.onKeyup);
   }
 
   onQueryChanged(): void {
@@ -31,6 +32,27 @@ export class SearchComponent implements OnInit {
 
   onSearchSelection(selected: NPC): void {
     console.info("New search selection", selected);
-    this.router.navigateByUrl("/" + selected._metadata.uuid);
+    this.router.navigateByUrl("/view/" + selected._metadata.uuid);
+  }
+
+  // TODO - keyboard navigation in result panel
+  private onKeyup(event: KeyboardEvent): void {
+    const inputId = "search-input";
+    const active = document.activeElement;
+    switch (event.key) {
+      case "/": {
+        document.getElementById(inputId)!.focus();
+        break;
+      }
+      case "ArrowUp": {
+        break;
+      }
+      case "ArrowDown": {
+        if (active?.id == inputId) {
+        }
+        break;
+      }
+    }
   }
 }
+
