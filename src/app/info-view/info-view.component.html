@@ -4,7 +4,10 @@
 >
   <h1>{{ this.infoFor.name }}</h1>
 
-  <attribute-panel
-    [attributes]="this.infoFor.attributes"
-  />
+  <div class="drag-boundary">
+    <attribute-panel
+      [attributes]="this.infoFor.attributes"
+    />
+  </div>
+
 <div>

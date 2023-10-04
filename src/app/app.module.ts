@@ -8,6 +8,7 @@ import { SearchViewComponent } from './search-view/search-view.component';
 import { ResultsPanelComponent } from './results-panel/results-panel.component';
 import { AppRoutingModule } from './app-routing.module';
 import { InfoViewComponent } from './info-view/info-view.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { InfoViewComponent } from './info-view/info-view.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    DragDropModule,
 
     AppRoutingModule,
   ],
