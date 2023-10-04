@@ -1,17 +1,49 @@
-<section class="attr-container row">
-  <div class="attr-panel col-12">
-
-    <div class="row align-items-center" style="padding-left: 8px; padding-right: 8px;">
-      <div
-        *ngFor="let attrKey of this.attributeKeys()"
-        class="attr-box col-2 text-center"
+<section class="attr-outer">
+  <div class="attr-container">
+    <div class="d-flex flex-column">
+      <h3
+        class="order-2" 
+        style="text-transform: uppercase; font-size: 1.24rem;"
       >
-        <div class="attr-box-inner">
-          <p class="attr-name">{{ attrKey.toLocaleUpperCase() }}</p>
-          <span class="attr-value">{{ this.getAttrValue(attrKey) }}</span>
-          <span class='attr-modifier'> ( {{ this.getModifierText(this.getAttrValue(attrKey)) }})</span>
+        Attributes
+      </h3>
+
+      <div
+        class="order-1 row"
+        style="margin-bottom: 16px;"
+      >
+        <button class="col-4 offset-4 move-btn">
+          Move
+        </button>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="attr-panel">
+      <div
+        class="align-items-center" 
+        style="padding-left: 8px; padding-right: 8px;"
+      >
+        <div
+          *ngFor="let attrKey of this.attributeKeys()"
+          class="attr-box text-center"
+        >
+          <div class="attr-box-inner">
+            <span class="attr-name">{{ attrKey.toLocaleUpperCase() }} </span>
+            <span class="attr-value">
+              {{ this.getAttrValueText(attrKey) }}
+            </span>
+            <span class='attr-modifier'> ( {{ this.getModifierText(this.getAttrValue(attrKey)) }})</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
+  <div *ngIf="this.showRemoveButton">
+    <button>Remove</button>
+  </div>
 </section>
+
+

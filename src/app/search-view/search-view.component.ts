@@ -39,6 +39,7 @@ export class SearchViewComponent implements OnInit {
   private onKeyup(event: KeyboardEvent): void {
     const inputId = "search-input";
     const active = document.activeElement;
+
     switch (event.key) {
       case "/": {
         document.getElementById(inputId)!.focus();

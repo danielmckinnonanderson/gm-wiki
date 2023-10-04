@@ -4,13 +4,14 @@ import { NgModule } from "@angular/core";
 import { InfoViewComponent } from "./info-view/info-view.component";
 
 const routes: Routes = [
-  { path: 'search', component: SearchViewComponent },
-  { path: 'info/:id', component: InfoViewComponent },
+  { path: "search",   component: SearchViewComponent },
+  { path: "info/:id", component: InfoViewComponent },
 
   { path: '**', redirectTo: 'search' }
 ];
 
 @NgModule({
+  providers: [  ],
   imports: [ RouterModule.forRoot(routes) ],
   exports: [ RouterModule ]
 })
