@@ -1,0 +1,25 @@
+.bkgrnd-outer {
+  width: 640px;
+  padding: 16px;
+  padding-top: 8px;
+}
+
+.bkgrnd-container {
+  border: solid black 2px;
+  padding: 16px;
+  padding-top: 4px;
+  margin-top: 4px;
+  border-radius: 16px;
+  box-shadow: 4px 4px black;
+  background-color: #ffffff;
+}
+
+hr {
+  margin-top: 4px;
+}
+
+.move-btn {
+  cursor: move;
+  width: 64px;
+}
+

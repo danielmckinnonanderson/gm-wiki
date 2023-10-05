@@ -1,0 +1,38 @@
+<section
+  class="bkgrnd-outer"
+  cdkDrag
+>
+  <div class="bkgrnd-container">
+    <div class="d-flex flex-column">
+      <h3
+        class="order-2"
+        style="text-transform: uppercase; font-size: 1.24rem;"
+      >
+        Background
+      </h3>
+
+      <div
+        class="order-1 d-flex align-items-center"
+        style="margin-bottom: 16px;"
+      >
+        <button
+          class="move-btn mx-auto"
+          cdkDragHandle
+        >
+          Move
+        </button>
+      </div>
+    </div>
+
+    <hr>
+
+    <div>
+      <p>{{ this.name }}</p>
+    </div>
+
+    <div>
+      <p>{{ this.alignment }}</p>
+    </div>
+  </div>
+</section>
+

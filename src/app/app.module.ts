@@ -9,6 +9,7 @@ import { ResultsPanelComponent } from './results-panel/results-panel.component';
 import { AppRoutingModule } from './app-routing.module';
 import { InfoViewComponent } from './info-view/info-view.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { NpcBackgroundPanelComponent } from './npc-background-panel/npc-background-panel.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     SearchViewComponent,
     ResultsPanelComponent,
     InfoViewComponent,
+    NpcBackgroundPanelComponent,
   ],
   imports: [
     BrowserModule,
