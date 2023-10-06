@@ -14,7 +14,9 @@ export class ActionsPanelComponent {
 
   constructor() {}
 
-  clickedExpand(title: string): void {
-    this.expanded.add(title);
+  clickedDetails(title: string): void {
+    this.expanded.has(title)
+      ? this.expanded.delete(title)
+      : this.expanded.add(title);
   }
 }

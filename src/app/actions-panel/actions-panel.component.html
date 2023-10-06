@@ -33,33 +33,48 @@
         class="acts-panel text-center"
       >
         <div
-          class="acts-box-inner" 
+          class="acts-box-inner row" 
           *ngIf="action.type === 'Melee Weapon Attack'"
         >
-          <div *ngIf="!this.expanded.has(action.title); else actionExpanded">
-            <button (click)="this.clickedExpand(action.title)">
-              Expand
-            </button>
+          <button
+            (click)="this.clickedDetails(action.title)"
+            class="col-2"
+          >
+          {{ this.expanded.has(action.title) ? "Close" : "Expand" }}
+          </button>
 
-            <span class="acts-name">
-              {{ action.title }}
-            </span>
-
-            <span class="acts-value">
-              {{ action.to_hit }}
-            </span>
-          </div>
-          <ng-template #actionExpanded>
-          </ng-template>
-        </div>
-
-        <div class="acts-box-inner" *ngIf="action.type === 'Effect'">
-          <span class="acts-name">
+          <span class="acts-name col-4">
             {{ action.title }}
           </span>
           
-          <!-- TODO - Standardize data in actions to be more presentable & uniform -->
+          <span class="acts-type col-6">
+            {{ action.type }}
+          </span>
+          <div
+            *ngIf="this.expanded.has(action.title)" 
+            class="row"
+          >
+            <hr>
+            <span>
+              {{ action.on_hit }}
+            </span>
+          </div>
+        </div>
 
+        <div class="acts-box-inner row" *ngIf="action.type === 'Effect'">
+          <button
+            (click)="this.clickedDetails(action.title)"
+            class="col-2"
+          >
+            {{ this.expanded.has(action.title) ? "Close" : "Expand" }}
+          </button>
+          <span class="acts-name col-4">
+            {{ action.title }}
+          </span>
+          <!-- TODO - Standardize data in actions to be more presentable & uniform -->
+          <span class="acts-type col-6">
+            {{ action.type }}
+          </span>
         </div>
       </div>
     </div>
