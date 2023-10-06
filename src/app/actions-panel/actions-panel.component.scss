@@ -1,0 +1,57 @@
+.acts-outer {
+  width: 572px;
+  padding: 16px;
+  padding-top: 8px;
+}
+
+.acts-container {
+  border: solid black 2px;
+  padding: 16px;
+  padding-top: 4px;
+  margin-top: 4px;
+  border-radius: 16px;
+  box-shadow: 4px 4px black;
+  background-color: #ffffff;
+}
+
+.move-btn {
+  cursor: move;
+  width: 64px;
+}
+
+hr {
+  margin-top: 4px;
+}
+
+.acts-panel {
+  border: solid black 2px;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.acts-box {
+  border: solid black 1px;
+  border-radius: 10px;
+}
+
+.acts-box-inner {
+  background-color: white;
+  margin: 4px;
+}
+
+.acts-name {
+}
+
+.acts-modifier {
+}
+
+.acts-value {
+  font-weight: 1000;
+  border: solid black 1px;
+  border-radius: 6px;
+  padding: 3px;
+  padding-left: 12px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+

@@ -1,0 +1,73 @@
+<section
+  class="acts-outer"
+  cdkDrag
+>
+  <div class="acts-container">
+    <div class="d-flex flex-column">
+      <h3
+        class="order-2"
+        style="text-transform: uppercase; font-size: 1.24rem;"
+      >
+        Actions 
+      </h3>
+
+      <div
+        class="order-1 d-flex align-items-center"
+        style="margin-bottom: 16px;"
+      >
+        <button
+          class="move-btn mx-auto" 
+          cdkDragHandle
+        >
+          Move
+        </button>
+      </div>
+    </div>
+
+    <hr>
+
+    <div>
+      <div
+        *ngFor="let action of this.actions"
+        style="margin-top: 4px; margin-bottom: 4px;"
+        class="acts-panel text-center"
+      >
+        <div
+          class="acts-box-inner" 
+          *ngIf="action.type === 'Melee Weapon Attack'"
+        >
+          <div *ngIf="!this.expanded.has(action.title); else actionExpanded">
+            <button (click)="this.clickedExpand(action.title)">
+              Expand
+            </button>
+
+            <span class="acts-name">
+              {{ action.title }}
+            </span>
+
+            <span class="acts-value">
+              {{ action.to_hit }}
+            </span>
+          </div>
+          <ng-template #actionExpanded>
+          </ng-template>
+        </div>
+
+        <div class="acts-box-inner" *ngIf="action.type === 'Effect'">
+          <span class="acts-name">
+            {{ action.title }}
+          </span>
+          
+          <!-- TODO - Standardize data in actions to be more presentable & uniform -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="this.showRemoveButton">
+    <button>Remove</button>
+  </div>
+</section>
+
+

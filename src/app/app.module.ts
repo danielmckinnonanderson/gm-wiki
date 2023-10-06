@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { InfoViewComponent } from './info-view/info-view.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NpcBackgroundPanelComponent } from './npc-background-panel/npc-background-panel.component';
+import { ActionsPanelComponent } from './actions-panel/actions-panel.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { NpcBackgroundPanelComponent } from './npc-background-panel/npc-backgrou
     ResultsPanelComponent,
     InfoViewComponent,
     NpcBackgroundPanelComponent,
+    ActionsPanelComponent,
   ],
   imports: [
     BrowserModule,
