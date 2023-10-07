@@ -1,27 +1,28 @@
-<div
-  class="container text-center"
-  *ngIf="this.infoFor"
->
-  <h1>{{ this.infoFor.name }}</h1>
+<panzoom-plane>
+  <div
+    class="text-center"
+    *ngIf="this.infoFor"
+  >
+    <h1>{{ this.infoFor.name }}</h1>
 
-  <div class="drag-boundary-attr">
-    <attribute-panel
-      [attributes]="this.infoFor.attributes"
-    />
-  </div>
+    <div class="drag-boundary-attr">
+      <attribute-panel
+        [attributes]="this.infoFor.attributes"
+      />
+    </div>
 
-  <div class="drag-boundary-bkgrnd">
-    <npc-background-panel
-      [name]="this.infoFor.name"
-      [alignment]="this.infoFor.alignment"
-      
-    />
-  </div>
+    <div class="drag-boundary-bkgrnd">
+      <npc-background-panel
+        [name]="this.infoFor.name"
+        [alignment]="this.infoFor.alignment"
+      />
+    </div>
 
-  <div class="drag-boundary-actions">
-    <actions-panel
-      [actions]="this.infoFor.actions"
-    />
-  </div>
+    <div class="drag-boundary-actions">
+      <actions-panel
+        [actions]="this.infoFor.actions"
+      />
+    </div>
+  <div>
+</panzoom-plane>
 
-<div>

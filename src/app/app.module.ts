@@ -11,6 +11,7 @@ import { InfoViewComponent } from './info-view/info-view.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NpcBackgroundPanelComponent } from './npc-background-panel/npc-background-panel.component';
 import { ActionsPanelComponent } from './actions-panel/actions-panel.component';
+import { NgxPanZoomModule } from 'ngx-panzoom';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ActionsPanelComponent } from './actions-panel/actions-panel.component';
     FormsModule,
     ReactiveFormsModule,
     DragDropModule,
+    NgxPanZoomModule,
 
     AppRoutingModule,
   ],

@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DbService } from '../db.service';
 import { NPC } from 'src/data/data.types';
+import { PanzoomPlaneComponent } from '../panzoom-plane/panzoom-plane.component';
 
 @Component({
   selector: 'app-info-view',
   templateUrl: './info-view.component.html',
-  styleUrls: ['./info-view.component.scss']
+  styleUrls: ['./info-view.component.scss'],
 })
 export class InfoViewComponent implements OnInit {
 
@@ -14,7 +15,7 @@ export class InfoViewComponent implements OnInit {
   
   constructor(private readonly route: ActivatedRoute,
               private readonly router: Router,
-             private readonly dbSvc: DbService) {}
+              private readonly dbSvc: DbService) {}
 
   ngOnInit(): void {
     const uuid = this.route.snapshot.url[1];
