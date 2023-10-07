@@ -1,9 +1,14 @@
-<panzoom-plane>
-  <div
-    class="text-center"
-    *ngIf="this.infoFor"
-  >
+<canvas-plane>
+</canvas-plane>
+
+
+<div
+  class="text-center"
+  *ngIf="this.infoFor"
+>
+  <canvas-plane>
     <h1>{{ this.infoFor.name }}</h1>
+
 
     <div class="drag-boundary-attr">
       <attribute-panel
@@ -23,6 +28,9 @@
         [actions]="this.infoFor.actions"
       />
     </div>
-  <div>
-</panzoom-plane>
+  </canvas-plane>
+<div>
+
+
+
 

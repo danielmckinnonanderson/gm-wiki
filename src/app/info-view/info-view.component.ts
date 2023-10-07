@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DbService } from '../db.service';
 import { NPC } from 'src/data/data.types';
-import { PanzoomPlaneComponent } from '../panzoom-plane/panzoom-plane.component';
 
 @Component({
   selector: 'app-info-view',
@@ -12,7 +11,7 @@ import { PanzoomPlaneComponent } from '../panzoom-plane/panzoom-plane.component'
 export class InfoViewComponent implements OnInit {
 
   infoFor: NPC | null = null;
-  
+
   constructor(private readonly route: ActivatedRoute,
               private readonly router: Router,
               private readonly dbSvc: DbService) {}

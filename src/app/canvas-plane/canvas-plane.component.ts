@@ -3,13 +3,11 @@ import { PanZoomComponent, PanZoomConfig, PanZoomAPI, PanZoomModel, PanZoomConfi
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'panzoom-plane',
-  templateUrl: './panzoom-plane.component.html',
-  styleUrls: ['./panzoom-plane.component.scss'],
-  imports: [PanZoomComponent],
-  standalone: true
+  selector: 'canvas-plane',
+  templateUrl: './canvas-plane.component.html',
+  styleUrls: ['./canvas-plane.component.scss'],
 })
-export class PanzoomPlaneComponent implements OnInit, OnDestroy {
+export class CanvasPlaneComponent implements OnInit, OnDestroy {
 
   panzoomConfig = new PanZoomConfig({
     zoomLevels: 5,
